@@ -1,0 +1,79 @@
+{
+  "name": "ReactTemplate",
+  "version": "1.0.0",
+  "description": "木自用react-ts-webpack模板,配合evil脚手架工具快速create",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve -c scripts/webpack.dev.js",
+    "build": "pnpm ts:checker && cross-env NODE_ENV=production webpack -c scripts/webpack.prod.js"
+  },
+  "keywords": [
+    "template",
+    "react-ts"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/plugin-transform-runtime": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/runtime": "^7.18.9",
+    "@evilmu/eslint-config-common": "^1.1.7",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
+    "@types/nprogress": "^0.2.0",
+    "@types/react": "^18.0.18",
+    "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.8",
+    "babel-loader": "^8.2.5",
+    "chalk": "4",
+    "core-js": "^3.25.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss": "^8.4.16",
+    "postcss-loader": "^7.0.1",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "react-refresh": "^0.14.0",
+    "sass": "^1.54.7",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.6",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.8.2",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "ahooks": "^3.7.0",
+    "axios": "^0.27.2",
+    "dayjs": "^1.11.5",
+    "nprogress": "^0.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "recoil": "^0.7.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "defaults",
+      "not ie < 11",
+      "last 2 versions",
+      "> 1%",
+      "iOS 9",
+      "last 3 iOS versions"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "@evilmu/common/vue-ts"
+    ]
+  }
+}

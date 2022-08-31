@@ -1,0 +1,121 @@
+  .layout {
+    background: radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);
+    background-size: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    .clock {
+      // background-color: #111;
+      font-family: 'Share Tech Mono', monospace;
+      text-align: center;
+      color: #daf6ff;
+      text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
+      border-radius: 40px;
+      padding: 20px;
+      .time {
+        letter-spacing: 0.05em;
+        font-size: 40px;
+        padding: 5px 0;
+      }
+    }
+  }
+  img {
+    border-radius: 20%;
+    width: 20%;
+  }
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    position: relative;
+    font-size: 1.5rem;
+    &::before {
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      inset: 0 0 0 0;
+      background: rgba(10, 175, 230, 0.5);
+      z-index: -1;
+      transition: transform 0.3s ease;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+
+  body {
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+    font-family: system-ui, sans-serif;
+  }
+
+  @media (orientation: landscape) {
+    body {
+      grid-auto-flow: column;
+    }
+  }
+
+  div {
+    font-size: 20px;
+  }
+  button {
+    width: 100px;
+    height: 40px;
+    background-color: rgba(85, 50, 50, 0.133);
+    border-radius: 30px;
+    &:hover {
+      background-color: rgba(236, 231, 231, 0.603);
+    }
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: 5px;
+    color: #fff;
+    position: relative;
+    animation: typing 3s steps(5) forwards infinite alternate-reverse;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background-color: #fff;
+      animation: blink 1s linear infinite;
+    }
+  }
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 680px;
+    }
+  }
