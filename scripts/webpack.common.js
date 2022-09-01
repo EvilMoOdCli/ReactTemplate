@@ -4,7 +4,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const pkgJSON = require('../package.json');
-const isDEV = process.env.NODE_ENV === 'development' // 是否是开发模式
 
 console.log('process.env.NODE_ENV: ', process.env.NODE_ENV);
 
@@ -44,7 +43,6 @@ module.exports = {
               ],
               plugins: [
                 '@babel/plugin-transform-runtime',
-                isDEV && require.resolve('react-refresh/babel'), // 如果是开发模式,就启动react热更新插件
               ],
             },
           },

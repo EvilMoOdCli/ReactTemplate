@@ -4,7 +4,7 @@
   "description": "木自用react-ts-webpack模板,配合evil脚手架工具快速create",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack serve -c scripts/webpack.dev.js",
-    "build": "pnpm ts:checker && cross-env NODE_ENV=production webpack -c scripts/webpack.prod.js"
+    "build": "tsc --noEmit && cross-env NODE_ENV=production webpack -c scripts/webpack.prod.js"
   },
   "keywords": [
     "template",

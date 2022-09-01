@@ -1,5 +1,6 @@
 const { merge } = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
@@ -7,7 +8,6 @@ module.exports = merge(common, {
   optimization: {
     minimize: true,
     minimizer: [
-      '...',
       new TerserPlugin({
         terserOptions: {
           format: {
@@ -55,11 +55,11 @@ module.exports = merge(common, {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [['autoprefixer']],
+                plugins: ['autoprefixer'],
               },
             },
           },
-          'scss-loader',
+          'sass-loader',
         ],
         exclude: /node_modules/,
       },
